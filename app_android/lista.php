@@ -53,23 +53,21 @@ if($_SESSION['status'] == 1){
 }
 echo "<script>
 		function sexo(){
-			var fem = document.getElementById('infem').value;
-			var masc = document.getElementById('inmasc').value;			
-			if(masc == 'on'){
-				masc = 1;
+			if(document.getElementById('masc').checked == true){
+				document.getElementById('inmasc').value = 1;
 				document.getElementById('fem').checked = false;
 				fem = 'off';
-				$(this).form.submit();
+				$('#form2').submit();
 			}else{
-				masc = 0;
+				document.getElementById('inmasc').value = 0;
 			}
-			if(fem == 'on'){
-				fem = 1;
+			if(document.getElementById('fem').checked == true){
+				document.getElementById('infem').value = 1;
 				document.getElementById('masc').checked = false;
 				masc = 'off';
 				$('#form1').submit();
 			}else{
-				fem = 0;
+				document.getElementById('infem').value = 0;
 			}
 		}
 	  </script>";
