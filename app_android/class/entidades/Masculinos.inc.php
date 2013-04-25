@@ -25,6 +25,7 @@ class Masculinos{
 				$array[$count] = array('cd'=>$coluna['cd_produto'], 
 							   'nome' => $coluna['nm_produto'],
 							   'descricao' =>$coluna['ds_produto'],
+							   'sexo' =>$coluna['sexo'],
 							   'valor' =>$coluna['vl_produto']);
 				$count=$count+1;
 			}

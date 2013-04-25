@@ -11,12 +11,9 @@
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>
 <body class="inicial">
 <div id="cabecalho">
-	<div class="logo"><img src="img/logo.png" /></div>
-</div><!-- #cabecalho -->
-<div id="all_pagina">
-
-<div id="user">
-			<p>
+	<div class="logo"><img src="img/logo.png" /></div>	
+		<div id="user">
+			
 				<?php 
 					$sessao = session_start(); 
 					if(isset($_SESSION['status'])){
@@ -29,11 +26,11 @@
 				<?php 
 				//Aqui utilizamos a variavel de sessao status para testar se o usuario está logado no sistema ou não, para
 				if($_SESSION['status'] == 1){					 
-				echo '<span id="identificacao" name="identificacao">Bem vindo: '.$_SESSION['login'].' <a href="logoff.php" title="Sair">Sair</a></span>';
+				echo '<span id="identificacao" name="identificacao">Bem vindo: '.$_SESSION['login'].' <a href="logoff.php" title="Sair">Sair</a></span><br>';
 				}else{
 					echo '<span id="identificacao" name="identificacao">Novo usuário? <a href="/cadastre-se.php">Cadastre-se</a></span>';
 				}?>
-			</p>
+		
 		
 		<?php 
 			$meses = array (1 => "Janeiro", 2 => "Fevereiro", 3 => "Março", 4 => "Abril", 5 => "Maio", 6 => "Junho", 7 => "Julho", 8 => "Agosto", 9 => "Setembro", 10 => "Outubro", 11 => "Novembro", 12 => "Dezembro");
@@ -48,8 +45,12 @@
 			$diadasemana = $hoje["wday"];
 			$nomediadasemana = $diasdasemana[$diadasemana];
 		?><span id="DataCompleta" name="DataCompleta" class="first"><?php echo "$nomediadasemana, $dia de $nomemes de $ano às $hora"; ?></span>
-	</div><!-- #user -->
-	<hr width="100%">
+		</div><!-- #user -->	
+	
+</div><!-- #cabecalho -->
+<br><br><br>
+<div id="all_pagina">
+
 	<?php
 		if($_SESSION['status'] == 0){	
 	?>
@@ -75,4 +76,3 @@
 		</div>
 	<?php }//termina de validar o usuário logado ?>
 		
-</div>
