@@ -54,20 +54,16 @@ if($_SESSION['status'] == 1){
 echo "<script>
 		function sexo(){
 			if(document.getElementById('masc').checked == true){
-				document.getElementById('inmasc').value = 1;
+				document.getElementById('inmasc').value = 0;
 				document.getElementById('fem').checked = false;
 				fem = 'off';
 				$('#form2').submit();
-			}else{
-				document.getElementById('inmasc').value = 0;
 			}
 			if(document.getElementById('fem').checked == true){
 				document.getElementById('infem').value = 1;
 				document.getElementById('masc').checked = false;
 				masc = 'off';
 				$('#form1').submit();
-			}else{
-				document.getElementById('infem').value = 0;
 			}
 		}
 	  </script>";
