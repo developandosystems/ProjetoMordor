@@ -20,7 +20,7 @@ class LogonAdmin{
 		$pass = mysql_escape_string(md5($pass));
 		$sql = "SELECT usuario_ FROM Admin WHERE usuario_='$login' AND sennha_='$pass' ";
 		//echo $pass.' -hash: + MySQL_NUM'.MYSQL_NUM;
-		$query = $this->banco->execSql($sql);
+		$query = $this->banco->query($sql);
 		$result = mysql_query($sql);
 		//apenas outra forma de chamar o metodo;
 		$row = mysql_fetch_array($query, MYSQL_NUM);
@@ -42,8 +42,8 @@ class LogonAdmin{
 	//na classe;
     public function __destruct(){
     	//$this->banco->desconectar();
-    	unset($this->banco); // destroi conteudo
-    	$this->banco = null; // destroi referencia
+    	 // destroi conteudo
+    	$this->banco->close_connection(); // destroi referencia
     }
 	
     //Fim metodo destrutor;
