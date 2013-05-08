@@ -2,8 +2,9 @@
 include('../cabecalho-int.php');
 if (isset($_GET['cod'])){
 $cod = mysql_real_escape_string($_GET['cod']);
-	
-	$sql = $banco->queryiProdutos($cod);
+	require_once ("../class/entidades/Produtos.inc.php");
+	$produtos = new Produtos();
+	$sql = $produtos->queryiProdutos($cod);
 	
 	while ($row = mysqli_fetch_row($sql)) {      
 	   $id    = $row[0];                         
@@ -32,7 +33,7 @@ $cod = mysql_real_escape_string($_GET['cod']);
 					</div>
 					<div id="garantia">
 						<legend style="line-height: 30px;">Termos de garantia das nossas peças.</legend>';
-						 $query = $banco->query("select termos_garantia from sistema");
+						 $query = $produtos->query("select termos_garantia from sistema");
 						 $row = mysql_fetch_row($query);
 						 $garantia = $row[0];
 							echo $garantia;

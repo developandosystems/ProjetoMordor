@@ -1,5 +1,7 @@
 <?php
-	$sql = $banco->queryiImagens();   
+require_once ("../class/entidades/Produtos.inc.php");
+$produtos = new Produtos();
+	$sql = $produtos->queryiImagens();   
 	while ($row = mysqli_fetch_row($sql)) {      
 	   $id_imagem    = $row[0];                         
 	   $bytes = $row[1];                         

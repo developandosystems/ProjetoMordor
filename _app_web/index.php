@@ -1,10 +1,31 @@
 <?php include('cabecalho.php');?>
+
 <div id="conteudo">	
 	<div class="col720">
 		<div id="promocoes">
-			<a href="#"><img src="css/img/promocao.png" width="800px" height="250px" /></a>
-			<div style="top:0; width:800px"class="separador"></div>
-		</div>
+		  <div id="controles">
+				<div class="descricao">
+				   <div class="texto-desc" id="txt-01ID">
+						<h2>Título</h2>
+						<p>A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</p>
+						
+					</div>
+					<div class="texto-desc inativo" id="txt-02ID">
+						<h2>Título2</h2>
+						<p>A string representing one of the three predefined speeds ("slow", "normal", or "fast") or the number of milliseconds to run the animation (e.g. 1000).</p>
+						
+					</div>
+				</div>
+			</div>
+			<div id="slides">
+				<div class="slideimg" id="img-id01">
+					<a href="#"><img src="css/img/promocao.png" width="800px" height="250px" /></a>
+				</div>
+				<div class="slideimg inativo" id="img-id02" bgcolor="#000">
+					<a href="#"><img src="css/img/promocao.png" width="800px" height="250px" /></a>
+				</div>
+			</div>
+		</div><!-- promocoes-->
 		<label style="margin-bottom:20px">Outros / Lançamentos</label>
 		<div id="container_mas" style="position:relative; min-height:500px">
 			<div class="jobBoxF item" style="position:absolute; width:200px; height:180px; left:30px; top:30px; ">

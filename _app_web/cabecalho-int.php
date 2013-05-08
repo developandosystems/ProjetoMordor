@@ -57,15 +57,15 @@
 				<li><a href="../index.php">Início</a></li>
 				<li class="linha"><a href="../produtos">Peças</a>
 					<ul class="segundo">
-						<li><a href="categorias/index.php?id=3" title="">Anel</a></li>
-						<li><a href="categorias/index.php?id=1" title="">Brincos</a></li>
-						<li><a href="categorias/index.php?id=2" title="">Colar</a></li>
-						<li><a href="categorias/index.php?id=6" title="">Corrente</a></li>
-						<li><a href="categorias/index.php?id=8" title="">Gargantilha</a></li>
-						<li><a href="categorias/index.php?id=7" title="">KIT - Conjunto</a></li>
-						<li><a href="categorias/index.php?id=5" title="">Pulseira</a></li>
-						<li><a href="categorias/index.php?id=9" title="">Religioso</a></li>
-						<li><a href="categorias/index.php?id=4" title="">Tornozeleira</a></li>
+						<li><a href="../categorias/index.php?id=3" title="">Anel</a></li>
+						<li><a href="../categorias/index.php?id=1" title="">Brincos</a></li>
+						<li><a href="../categorias/index.php?id=2" title="">Colar</a></li>
+						<li><a href="../categorias/index.php?id=6" title="">Corrente</a></li>
+						<li><a href="../categorias/index.php?id=8" title="">Gargantilha</a></li>
+						<li><a href="../categorias/index.php?id=7" title="">KIT - Conjunto</a></li>
+						<li><a href="../categorias/index.php?id=5" title="">Pulseira</a></li>
+						<li><a href="../categorias/index.php?id=9" title="">Religioso</a></li>
+						<li><a href="../categorias/index.php?id=4" title="">Tornozeleira</a></li>
 					</ul>
 				</li>
 				<li class="linha"><a href="../femininos">Femininos</a></li>
@@ -79,6 +79,6 @@
 		</div>
 	</div>
 </div>
-<div id="all_pagina">
+<div id="pagina">
 
 	

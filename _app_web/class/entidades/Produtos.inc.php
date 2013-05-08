@@ -3,7 +3,9 @@
 	Autor: Marcélio de Oliveira
 */
 //Classe Categorias;
-require("../class/sec/bd_.php");
+function __autoload($class_name){
+	require_once ("../class/sec/bd_.php");
+}
 
 class Produtos{
 		private $banco;
@@ -34,10 +36,8 @@ class Produtos{
 			}
 			return $array;
 		}
-		
-		//Pega todos os produtos
-		public function queryiImagens(){
-			$result = mysqli_query($this->banco->conn,"select cd_imagem, imagem, tipo, thumb, nm_produto, ds_produto from produtos inner join imagens on(imagens.Produtos_cd_produto = produtos.cd_produto)");
+		public function query($sql){
+			$result = mysql_query($sql,$this->banco->connection);
 			$this->banco->confirm_query($result);
 			return $result;
 		}
@@ -47,9 +47,38 @@ class Produtos{
 			$this->banco->confirm_query($result);
 			return $result;
 		}
+			
 		public function queryiThumb($id){
 			$result = mysqli_query($this->banco->conn,"SELECT tipo,thumb FROM imagens WHERE cd_imagem = ".$id."");
-			$this->confirm_query($result);
+			$this->banco->confirm_query($result);
+			return $result;
+		}
+		//Categoriza pelo ID do PRODUTO
+		public function queryiProdutos($id){
+			$result = mysqli_query($this->banco->conn,"select cd_imagem, imagem, tipo, thumb, nm_produto, ds_produto from produtos inner join imagens on(imagens.Produtos_cd_produto = produtos.cd_produto) WHERE produtos.cd_produto = ".$id."");
+			$this->banco->confirm_query($result);
+			return $result;
+		}
+		//Categoriza pelo ID do Categoria
+		public function queryiCategoria($id){
+			$result = mysqli_query($this->banco->conn,"select cd_imagem, imagem, tipo, thumb, nm_produto,ds_produto, cd_produto from produtos inner join imagens on(imagens.Produtos_cd_produto = produtos.cd_produto) WHERE produtos.Categoria_cd_categoria = ".$id."");
+			$this->banco->confirm_query($result);
+			return $result;
+		}
+		//Pega todos os produtos
+		public function queryiImagens(){
+			$result = mysqli_query($this->banco->conn,"select cd_imagem, imagem, tipo, thumb, nm_produto, ds_produto, cd_produto from produtos inner join imagens on(imagens.Produtos_cd_produto = produtos.cd_produto)");
+			$this->banco->confirm_query($result);
+			return $result;
+		}
+		public function queryiFemininos(){
+			$result = mysqli_query($this->banco->conn,"select cd_imagem, imagem, tipo, thumb, nm_produto, ds_produto, cd_produto from produtos inner join imagens on(imagens.Produtos_cd_produto = produtos.cd_produto) where produtos.sexo=0");
+			$this->banco->confirm_query($result);
+			return $result;
+		}
+		public function queryiMasculinos(){
+			$result = mysqli_query($this->banco->conn,"select cd_imagem, imagem, tipo, thumb, nm_produto, ds_produto, cd_produto from produtos inner join imagens on(imagens.Produtos_cd_produto = produtos.cd_produto) where produtos.sexo=1");
+			$this->banco->confirm_query($result);
 			return $result;
 		}
 		

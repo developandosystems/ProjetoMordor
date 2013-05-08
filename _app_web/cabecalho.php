@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <head>
-<link href="css/estilo.css" type="text/css" rel="stylesheet"/>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<!--[if gte IE 8]>
-		<link href="css/ie8.css" rel="stylesheet" type="text/css" media="all">
+	<link href="<?php echo dirname($_SERVER['PHP_SELF'])?>/css/estilo.css" type="text/css" media="all" rel="stylesheet"/>
+	<link href="<?php echo dirname($_SERVER['PHP_SELF'])?>/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+ 	<![endif]-->
+	<!--[if gte IE 8]>
+			<link href="css/ie8.css" rel="stylesheet" type="text/css" media="all">
+			<link rel="stylesheet" href="html5/css/main.css" type="text/css" />
+			<script type="text/javascript" src="html5/js/CreateHTML5Elements.js"></script>
+	<![endif]-->		
+	<!--[if IE 7]>
+		<link href="css/ie7.css" rel="stylesheet" type="text/css" media="all">
 		<link rel="stylesheet" href="html5/css/main.css" type="text/css" />
 		<script type="text/javascript" src="html5/js/CreateHTML5Elements.js"></script>
-<![endif]-->		
-<!--[if IE 7]>
-	<link href="css/ie7.css" rel="stylesheet" type="text/css" media="all">
-	<link rel="stylesheet" href="html5/css/main.css" type="text/css" />
-	<script type="text/javascript" src="html5/js/CreateHTML5Elements.js"></script>
-<![endif]-->
-<meta http-equiv="cache-control" content="Accept-Encoding">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width">
+	<![endif]-->
+	
 </head>
 <body class="inicial">
 <?php 
@@ -28,7 +32,7 @@
 	}
 ?>
 <div id="cabecalho">
-	<div class="logo"><img src="css/img/logo.png" width="160px" height="60px" /></div>	
+	<div class="logo"><img src="<?php echo dirname($_SERVER['PHP_SELF'])?>/css/img/logo.png" width="160px" height="60px" /></div>	
 		<div id="user">				
 			<?php 
 				//Aqui utilizamos a variavel de sessao status para testar se o usuario está logado no sistema ou não, para
@@ -89,8 +93,7 @@
 		</div>
 	</div>
 </div>
-<div class="separador"></div>
 <br>
-<div id="all_pagina">
+<div id="pagina">
 
 	

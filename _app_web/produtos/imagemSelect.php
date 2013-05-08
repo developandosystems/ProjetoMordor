@@ -1,8 +1,11 @@
 <?php
+require_once ("../class/entidades/Produtos.inc.php");
+$produtos = new Produtos();
+
 if (isset($_GET['codigo'])){
 $cod = mysql_real_escape_string($_GET['codigo']);
 	
-	$sql = $banco->queryiProdutos($cod);
+	$sql = $produtos->queryiProdutos($cod);
 	
 	while ($row = mysqli_fetch_row($sql)) {      
 	   $id    = $row[0];                         

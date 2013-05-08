@@ -1,8 +1,10 @@
 <?php
+	require_once ("../class/entidades/Produtos.inc.php");
+$produtos = new Produtos();
 if (isset($_GET['id'])){
 	$cod = mysql_real_escape_string($_GET['id']);
 }
-	$sql = $banco->queryiCategoria($cod);   
+	$sql = $produtos->queryiCategoria($cod);   
 	while ($row = mysqli_fetch_row($sql)) {      
 	   $id_img    = $row[0];                         
 	   $bytes = $row[1];                         

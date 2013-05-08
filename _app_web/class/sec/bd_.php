@@ -16,7 +16,7 @@ class Banco{
 	
 	//-----------------------------------------------------------------------
 	//construtor: Conecta com o banco;
-	private $connection;
+	public $connection;
 	public $conn;
 
 		function __construct(){
@@ -54,39 +54,6 @@ class Banco{
 			return $result;
 		}
 		
-		public function queryiThumb($id){
-			$result = mysqli_query($this->conn,"SELECT tipo,thumb FROM imagens WHERE cd_imagem = ".$id."");
-			$this->confirm_query($result);
-			return $result;
-		}
-		//Categoriza pelo ID do PRODUTO
-		public function queryiProdutos($id){
-			$result = mysqli_query($this->conn,"select cd_imagem, imagem, tipo, thumb, nm_produto, ds_produto from produtos inner join imagens on(imagens.Produtos_cd_produto = produtos.cd_produto) WHERE produtos.cd_produto = ".$id."");
-			$this->confirm_query($result);
-			return $result;
-		}
-		//Categoriza pelo ID do Categoria
-		public function queryiCategoria($id){
-			$result = mysqli_query($this->conn,"select cd_imagem, imagem, tipo, thumb, nm_produto,ds_produto, cd_produto from produtos inner join imagens on(imagens.Produtos_cd_produto = produtos.cd_produto) WHERE produtos.Categoria_cd_categoria = ".$id."");
-			$this->confirm_query($result);
-			return $result;
-		}
-		//Pega todos os produtos
-		public function queryiImagens(){
-			$result = mysqli_query($this->conn,"select cd_imagem, imagem, tipo, thumb, nm_produto, ds_produto, cd_produto from produtos inner join imagens on(imagens.Produtos_cd_produto = produtos.cd_produto)");
-			$this->confirm_query($result);
-			return $result;
-		}
-		public function queryiFemininos(){
-			$result = mysqli_query($this->conn,"select cd_imagem, imagem, tipo, thumb, nm_produto, ds_produto, cd_produto from produtos inner join imagens on(imagens.Produtos_cd_produto = produtos.cd_produto) where produtos.sexo=0");
-			$this->confirm_query($result);
-			return $result;
-		}
-		public function queryiMasculinos(){
-			$result = mysqli_query($this->conn,"select cd_imagem, imagem, tipo, thumb, nm_produto, ds_produto, cd_produto from produtos inner join imagens on(imagens.Produtos_cd_produto = produtos.cd_produto) where produtos.sexo=1");
-			$this->confirm_query($result);
-			return $result;
-		}
 		public function fetch_array($result_set){
 			return mysql_fetch_array($result_set);
 		}
