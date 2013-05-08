@@ -1,0 +1,14 @@
+1 - Imagens
+    #Todas as imagens dos produtos que forem produziadas teram que
+     a mesma dimensões que a imagem "ancora" contida nessa pasta;
+
+    #É necessario analizar se a necessidade de reduzir o convas da
+     imagem, deixando a imagem com menos bordas em branco;
+    
+    $Está faltando a linha vertical que separa a imagem das especi- 
+     ções do produto;
+
+2 - Fontes
+    Preciso das especificações das fontes de cada linha da descrição,
+    contendo informações como nome, tamanho, estilo e hexadecimal das
+    cores. 
