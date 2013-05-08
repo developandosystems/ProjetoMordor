@@ -62,29 +62,13 @@
 					<img src="css/img/destaque5.png" />
 					<span class="details"><strong>Andani</strong><br>Miriam Sánchez Ocampo</span>
 				</a>			
-			</div>			
-		</div>
-		
-		<!--div id="destaques">
-			<label style="color:#ff5400">Brincos</label>
-			<div class="box3">
-					<a href="categorias/index.php?id=1"><img src="css/img/destaque3.png" /></a>
-					<div style="top:0; width:420px"class="separador"></div>
-				</div>
-				<div class="box4">
-					<a href="categorias/index.php?id=2"><img src="css/img/destaque4.png" /></a>
-					<div style="top:0; width:480px"class="separador"></div>
-				</div>
-				<br><br>
-			<label style="color:#000">Religiosos</label>
-			<div class="box5">
-				<a href="categorias/index.php?id=9"><img src="css/img/destaque1.png" /></a>
 			</div>
-			<div class="ultimo">
-				<a href="categorias/index.php?id=7"><img src="css/img/destaque5.png" /></a>
-			</div-->
-		</div><!-- destaques-->
-		
+			<div class="jobBoxF item" style="position:absolute; width:200px;height: 147px;left: 510px;top: 175px; ">
+                    <a href="#"><br>
+					<p>Teste os produtos, que separamos especialmente pra você</p></a>
+            </div>			
+		</div><!-- container das categorias -->
+	
 	</div><!-- col720 -->
 	<div style="clear:both"></div>
 </div><!-- conteudo -->

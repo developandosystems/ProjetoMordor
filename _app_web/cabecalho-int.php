@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <head>
 <link href="../css/estilo.css" type="text/css" media="all" rel="stylesheet"/>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js" type="text/javascript"></script>
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,7 +19,7 @@
 		//echo "Status:". $_SESSION['status'];
 	}
 ?>
-	<div class="logo"><img src="../css/img/logo.png" /></div>	
+	<div><h1 class="logo"><a href="index.php">logo></a></h1></div>	
 		<div id="user">
 			
 				

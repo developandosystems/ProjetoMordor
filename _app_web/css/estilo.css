@@ -3,7 +3,8 @@ a:hover{color: #ff5400 !important;border-bottom: 2px solid #333;}
 ul li {list-style-type: none;}
 .button{width:206px !important; padding:5px 0 22px !important}
 #cabecalho{margin:0; padding:0; position:fixed; height:70px; width:100%;  background:#000 url("img/cabecalho.png") repeat-x; z-index: 100000000;}
-.logo{width:160px; margin-left:50px; float:left}
+.logo{width:160px; height:60px; position:absolute; margin:0}
+.logo a{width:160px; height:60px; margin-left:50px; float:left; background: transparent url('img/logo.png') no-repeat left top;text-indent: -9999px;}
 #top{width: 100%;height: 59px;background-color: #F6F6F6; display: table;border-bottom: solid 1px #E6E6E6;position:fixed; z-index:1}
 #pagina{width:1000px; margin:50px auto 5px auto;}
 #informacoes{background:#f0f0f0;padding-bottom:10px;}
@@ -110,7 +111,7 @@ div.item {float: left;margin: 10px;	background:#eee}
 #container_mas div.jobBoxF:hover p {color: #B65E4F;-moz-transition: color .2 ease-in-out;}
 
 /* Customizando o Banner */
-#controles {width: 215px; height:329px; float: left;overflow: hidden;background:#000; opacity:0.6}
+#controles {width: 215px; height:329px; float: left;overflow: hidden;background:#555; opacity:0.6}
 #controles .descricao {float: left;width: 215px;}
 #slides{position:relative; float:right; width:785px}
 .texto-desc {margin:40px 20px;}

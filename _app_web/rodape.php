@@ -23,12 +23,10 @@
 	 <li></li>
    </ul>
 </div>
-	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-ui.min.js" type="text/javascript"></script>
 	<script src="js/jquery.html5form-1.5-min.js" type="text/javascript"></script>
 	<script src="js/jquery.scrollTo-1.4.2-min.js" type="text/javascript"></script>
 	<script src="js/jquery.mouseinfobox.js" type="text/javascript"></script>
-	<script src="js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="js/expansion.js" type="text/javascript"></script>
 </body>
 </html>

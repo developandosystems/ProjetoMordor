@@ -18,7 +18,7 @@ $("#container_mas div:not(jobBox)").live({
 $('#promocoes').live({
    mouseenter:
 	   function(){
-		$(this).stop().animate({backgroundColor:'#7F7FF5'}, {duration:500});
+		$(this).stop().animate({backgroundColor:'#F7E247'}, {duration:500});
 	  },
    mouseleave:
    function(){
@@ -44,12 +44,15 @@ var curPhoto = jQuery("#slides .ativo");
     showImage(nxtPhoto, 300);
     showTxt(nxtTxt,300);
  }// aquela que faz o baguio girar
-function showImage(img, duration){ 
-        jQuery('#slides .slideimg').fadeOut(300).removeClass('ativo').addClass('inativo')
-        img.animate({opacity:1.0}, duration, function(){        
-        jQuery(this).removeClass('inativo');
-        jQuery(this).addClass('ativo').fadeIn(300);
-    });     
+function showImage(img, duration){
+		jQuery('.ativo img').css({'width':'600px'});
+        jQuery('#slides .slideimg').fadeOut(300).removeClass('ativo').addClass('inativo');
+        img.animate({opacity:1.0, left:"45px"}, duration, function(){        
+			jQuery(this).removeClass('inativo');
+			jQuery(this).addClass('ativo').fadeIn(300);
+			jQuery('.ativo img').animate({width:'800px', top:"45px"},3000, function(){});
+			jQuery('#promocoes').stop().animate({backgroundColor:'#98EB78'}, {duration:100});
+		});     
 }//mostraimg
 function showTxt(img, duration){ 
       jQuery('.descricao .texto-desc').fadeOut(300).removeClass('ativo').addClass('inativo')

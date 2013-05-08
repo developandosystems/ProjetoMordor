@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <head>
-	<link href="<?php echo dirname($_SERVER['PHP_SELF'])?>/css/estilo.css" type="text/css" media="all" rel="stylesheet"/>
-	<link href="<?php echo dirname($_SERVER['PHP_SELF'])?>/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-	<meta http-equiv="cache-control" content="no-cache">
+	<link href="css/estilo.css" type="text/css" media="all" rel="stylesheet"/>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<meta http-equiv="pragma" content="no-cache, no-store">
+	<meta http-equiv="cache-control" content="no-cache, no-store">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
@@ -19,8 +22,6 @@
 		<link rel="stylesheet" href="html5/css/main.css" type="text/css" />
 		<script type="text/javascript" src="html5/js/CreateHTML5Elements.js"></script>
 	<![endif]-->
-	
-</head>
 <body class="inicial">
 <?php 
 	$sessao = session_start(); 
@@ -32,7 +33,7 @@
 	}
 ?>
 <div id="cabecalho">
-	<div class="logo"><img src="<?php echo dirname($_SERVER['PHP_SELF'])?>/css/img/logo.png" width="160px" height="60px" /></div>	
+	<div><h1 class="logo"><a href="index.php">logo</a></h1></div>	
 		<div id="user">				
 			<?php 
 				//Aqui utilizamos a variavel de sessao status para testar se o usuario está logado no sistema ou não, para
