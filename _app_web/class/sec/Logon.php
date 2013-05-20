@@ -37,15 +37,18 @@ class Logon{
 		}
 		
 		$sql_usuario = "select nm_cliente from cliente where cd_cliente = $this->consulta_cd";
-		$result_usuario = mysql_query($sql_usuario);//apenas outra forma de chamar o metodo;
-		
+		$result_usuario = mysql_query($sql_usuario);//apenas outra forma de chamar o metodo;		
 		$row_usuario = mysql_fetch_array($query, MYSQL_NUM);
 		
-		while ($coluna = mysql_fetch_array($result_usuario)){
-			$this->consulta_nome = $coluna['nm_cliente'];
-		}
+		if ($row_usuario != NULL){
+			while ($coluna = mysql_fetch_array($result_usuario)){
+				$this->consulta_nome = $coluna['nm_cliente'];
+			}
+		}//trata o resultado da consulta
+		
 		$_SESSION['nomedousuario'] = $this->consulta_nome;
 		mysql_free_result($query);
+		
 		if ($row != NULL){
 			return true;
 		}else{

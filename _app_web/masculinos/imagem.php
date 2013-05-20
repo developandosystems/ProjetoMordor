@@ -11,17 +11,16 @@ $produtos = new Produtos();
 	   $nome = $row[4];
 	   $descricao = $row[5];
 	   $id_produto = $row[6];
-	   echo	'<div>
+	     echo	'<div>
 					<a href="../produtos/produtoselec.php?cod='.$id_produto.'">
-						<img src="gera-thumb.php?id='.$id_imagem.'" width="130" height="130"/> 
-						<h1 class="lupa">lupa</h1>
+						<img align="left" src="gera-thumb.php?id='.$id_imagem.'" width="130px" height="130px"/> 					
 						<h2>'.$nome.'</h2>
 						<strong>Descrição:</strong>
-						<span class="descricao">
+						<p class="descricao">
 							'.$descricao.'
-						</span>
-						<del></del>
-						<span class="preco">R$ 20,00</span>
+						</p>
+						DE: <del>R$43,00</del>&nbsp;&nbsp; <span class="preco">POR: R$ 20,00</span>
+						<h1 class="lupa">lupa</h1>
 					</a>
 				</div>';
 	}

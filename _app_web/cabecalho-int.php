@@ -19,7 +19,7 @@
 		//echo "Status:". $_SESSION['status'];
 	}
 ?>
-	<div><h1 class="logo"><a href="index.php">logo></a></h1></div>	
+	<div><h1 class="logo"><a href="index2.php">logo></a></h1></div>	
 		<div id="user">
 			
 				
@@ -56,7 +56,7 @@
 		</div><?php }?>
 		<div id="bemvindo">
 			<ul class="menu">
-				<li><a href="../index.php">Início</a></li>
+				<li><a href="../index2.php">Início</a></li>
 				<li class="linha"><a href="../produtos">Peças</a>
 					<ul class="segundo">
 						<li><a href="../categorias/index.php?id=3" title="">Anel</a></li>

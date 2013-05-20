@@ -22,7 +22,7 @@
 		<link rel="stylesheet" href="html5/css/main.css" type="text/css" />
 		<script type="text/javascript" src="html5/js/CreateHTML5Elements.js"></script>
 	<![endif]-->
-<body class="inicial">
+<body class="">
 <?php 
 	$sessao = session_start(); 
 	if(isset($_SESSION['status'])){
@@ -33,7 +33,7 @@
 	}
 ?>
 <div id="cabecalho">
-	<div><h1 class="logo"><a href="index.php">logo</a></h1></div>	
+	<div><h1 class="logo"><a href="index2.php">logo</a></h1></div>	
 		<div id="user">				
 			<?php 
 				//Aqui utilizamos a variavel de sessao status para testar se o usuario está logado no sistema ou não, para
@@ -69,7 +69,7 @@
 		</div><?php } ?>
 		<div id="bemvindo">
 			<ul class="menu">
-				<li><a href="index.php">Início</a></li>
+				<li><a href="index2.php">Início</a></li>
 				<li class="linha"><a href="produtos">Peças</a>
 					<ul class="segundo">
 						<li><a href="categorias/index.php?id=3" title="">Anel</a></li>

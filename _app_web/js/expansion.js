@@ -1,11 +1,12 @@
 $(document).ready(
-//menu
-function(){$('.topo').fadeIn(0, function(){});$(".linha").hover(function(){$(this).children('ul').addClass('expanded');$('.expanded').fadeIn('fast', function() {});});$("#conteudo").hover(function(){$('.expanded').fadeOut('slow',function(){});$('.expanded').removeClass('expanded');});$(".expanded").mouseout(function(){$('.expanded').fadeOut('slow',function(){});$('.expanded').removeClass('expanded');}); });
+	//menu
+	function(){$('.topo').fadeIn(0, function(){});$(".linha").hover(function(){$(this).children('ul').addClass('expanded');$('.expanded').fadeIn('fast', function() {});});$("#conteudo").hover(function(){$('.expanded').fadeOut('slow',function(){});$('.expanded').removeClass('expanded');});$(".expanded").mouseout(function(){$('.expanded').fadeOut('slow',function(){});$('.expanded').removeClass('expanded');}); }
+);
+
+//banner
 $("#container_mas div:not(jobBox)").live({
 	mouseenter:
 	   function() {
-			//var altura = $(this).find('img').height();
-			//$(this).find("a span.details").css({'height':altura,'top':-altura/40});
 			$(this).find("a span.details").fadeIn(100);	
 	   },
 	mouseleave:
@@ -13,6 +14,7 @@ $("#container_mas div:not(jobBox)").live({
 			$(this).find("a span.details").fadeOut(100);
 	   }
 });
+
 
 //animacao banner
 $('#promocoes').live({
@@ -51,7 +53,7 @@ function showImage(img, duration){
 			jQuery(this).removeClass('inativo');
 			jQuery(this).addClass('ativo').fadeIn(300);
 			jQuery('.ativo img').animate({width:'800px', top:"45px"},3000, function(){});
-			jQuery('#promocoes').stop().animate({backgroundColor:'#98EB78'}, {duration:100});
+			jQuery('#promocoes').stop().animate({duration:100});
 		});     
 }//mostraimg
 function showTxt(img, duration){ 
@@ -62,7 +64,31 @@ function showTxt(img, duration){
     });     
 }//mostra texto
 
-jQuery(document).ready(function( $ ){   
+jQuery(document).ready(function( $ ){
+	//top	
+   $(window).scroll(function () {
+        if ($(this).scrollTop() > 80) {
+            $('#top').css({
+                'position' : 'fixed',
+                'top' : '0'
+            });
+        } else {
+            $('#top').css({
+                'position' : 'none',
+                'top' : '60px'
+            });
+        }
+    });
+ 
+	//splash
+	$('.splash img').stop().animate({opacity: 1},6000, function(){
+		$(this).css("-webkit-transform", "rotate("+ $("#txtDeg").val() + "deg)");
+		$('.inicial').animate({left:'0'},1000, function(){
+			window.location.href='index2.php';
+		});
+	});
+	
+	
     $('#controle li a').each(function(index){
     $(this).prepend('<span class="myNumberClass">'+ (index+1) +'</span>')
 });//contagem do controle

@@ -13,17 +13,12 @@ if (isset($_GET['id'])){
 	   $nome = $row[4];
 	   $descricao = $row[5];
 	   $id = $row[6];
-	   echo	'<div>
+	   echo	'<div style="float:left;width:220px" class="listaEstoque">
 					<a href="../produtos/produtoselec.php?cod='.$id.'">
-						<img src="gera-thumb.php?id='.$id_img.'" width="130" height="130"/> 
-						<h1 class="lupa">lupa</h1>
-						<h2>'.$nome.'</h2>
-						<strong>Descrição:</strong>
-						<span class="descricao">
-							'.$descricao.'
-						</span>
-						<del></del>
-						<span class="preco">R$ 20,00</span>
+						<img width="190px" height="190px" class="imgEstoque" src="gera-thumb.php?id='.$id_img.'"/> 
+						<ul class="info">
+							<li>'.$nome.'</li>
+							<li class="imgDescricao">'.$descricao.'</li></ul>
 					</a>
 				</div>';
 	}
